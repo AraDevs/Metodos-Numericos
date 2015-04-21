@@ -8,6 +8,7 @@ Todo mundo es bienvenido a contribuir, el repositorio esta abierto a su revisió
 1. Cada código debe ser colocado en la carpeta respectiva para ello, revisar la unidad correspondiente y el temario.
 2. Si se van a crear programas nuevos o modificar los existentes, seguir el formato deseado; no hacer cambios en los códigos ya mostrados. 
 3. En caso de no entender los ejemplos o los códigos estándares puede crear un código particular pero colocar como nombre de archivo el sufijo "_ppatch". Ejemplo: "parcial1_ppatch.m".
-4. Si el código a crear es para algun ejercicio particular (uno que implique pedir varios datos de ingreso y que sea realizado exactamente de dicha manera) seguir las reglas del punto 2, caso contrario seguir el punto 3 pero colocar como nombre de archivo el sufijo "_patch". Ejemplo: "parcial1_patch.m.
+4. Si el código a crear es para algun ejercicio particular (uno que implique pedir varios datos de ingreso y que sea realizado exactamente de dicha manera debido a indicaciones del docente) seguir las reglas del punto 2, caso contrario seguir el punto 3 pero colocar como nombre de archivo el sufijo "_patch". Ejemplo: "parcial1_patch.m.
+5. En caso siga las reglas de los puntos 3 y 4, favor colocarlo en la carpeta respectiva o enviar un correo consultando en donde guardarlo en caso tenga alguna duda. Si puedo ayudar y está a mi alcance lo haré con todo gusto.
 
 Estas reglas no se han puesto para limitar, al contrario, entre mas ordenado y entendible sea el código, la situación será menos complicada para los nuevos que lean los códigos y quieran sacar algo de plantilla para sus propios ejercicios. Si tienen alguna duda o consulta al respecto estoy a la orden por medio de mi correo.
