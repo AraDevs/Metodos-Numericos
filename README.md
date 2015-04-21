@@ -10,11 +10,12 @@ Empecé este repositorio debido a que necesitaba una manera de ordenar todos los
 
 Cada código esta guardado dentro de la carpeta correspondiente, las carpetas están denominadas de la siguiente manera:
 
-1. Unidad 1:
-2. Unidad 2:
-3. Unidad 3:
-4. Unidad 4:
-5. Unidad 5:
+1. Unidad 1
+2. Unidad 2
+3. Unidad 3
+4. Unidad 4
+5. Unidad 5
+6. Material de apoyo (incluye códigos de uso general a la mayoría de unidades)
 
 El programa a utilizar en la materia es Matlab, no agregaré instrucciones sobre como instalarlo (por el momento) ni enlaces de descarga; asumiré que han conseguido el programa por sus medios y ya está instalado en su máquina por lo que podrán clonar este repositorio y trabajar en ello.
 
