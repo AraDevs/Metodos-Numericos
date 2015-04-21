@@ -12,9 +12,10 @@ Cada código esta guardado dentro de la carpeta correspondiente, las carpetas es
 
 1. Unidad 1:
 2. Unidad 2:
-3. Unidad 4:
-4. Unidad 5:
+3. Unidad 3:
+4. Unidad 4:
+5. Unidad 5:
 
-La unidad 3 (Diferenciación e Integración numérica) no aparece debido a que la mayoría de ejercicios son realizados a mano en lugar del programa, si encuentro que de alguna manera usan programas en dicha unidad lo agregaré posteriormente. El programa a utilizar en la materia es Matlab, no agregaré instrucciones sobre como instalarlo (por el momento) ni enlaces de descarga; asumiré que han conseguido el programa por sus medios y ya está instalado en su máquina por lo que podrán clonar este repositorio y trabajar en ello.
+El programa a utilizar en la materia es Matlab, no agregaré instrucciones sobre como instalarlo (por el momento) ni enlaces de descarga; asumiré que han conseguido el programa por sus medios y ya está instalado en su máquina por lo que podrán clonar este repositorio y trabajar en ello.
 
 Cualquiera puede contribuir a este repositorio, para ello revisar el archivo denominado "INSTRUCCIONES" el cual proporcionará la información para ello. Si tienes alguna duda, consulta o quieres contribuir; contactame a mi correo jsbm1089@gmail.com en el cual puedo contestar varias dudas.
