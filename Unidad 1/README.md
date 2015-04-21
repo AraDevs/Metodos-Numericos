@@ -1,8 +1,8 @@
 # Unidad 1: Soluciones de ecuaciones de 1 variable
 
-*Extracto tomado de Wikipedia*
+*Extracto tomado de Wikipedia:*
 
-En análisis numérico un algoritmo de búsqueda de raíces es un método numérico o algorítmico para encontrar las soluciones aproximadas de una ecuación dada por la expresión f(x) = 0 para una función matemática f dada. A la solución x de la ecuación se le llama raíz o cero de la función.
+"En análisis numérico un algoritmo de búsqueda de raíces es un método numérico o algorítmico para encontrar las soluciones aproximadas de una ecuación dada por la expresión f(x) = 0 para una función matemática f dada. A la solución x de la ecuación se le llama raíz o cero de la función."
 
 En esta unidad se verán varios métodos de resolución, cada uno con sus propias particularidades, entre estos métodos se mencionan los siguientes:
 
