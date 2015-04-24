@@ -1,25 +1,23 @@
 %Conversiones varias
-%Aca se dan varias medidas de conversion para medidas varias
+%Aca se dan conversion de valores para varias mediciones físicas y matemáticas
 
-%1 plg ~ 2.54 cm (OK)
-%1 cm ~ 0.3937007874 plg (OK)
-%1 ft ~ 0.3048 m (OK)
-%1 m ~ 3.280839895 ft (OK)
-%1 milla ~ 1.609344 km (OK)
-%1 km ~ 0.6213711922 millas (OK)
-%1 lb ~ 0.4535924 kg (OK)
-%1 kg ~ 2.204622476 lb (OK)
-%1 J ~ 0.2389029576 cal (OK)
-%1 cal ~ 4.1858 J (OK)
-%1 oz ~ 28.34952 g (OK)
-%1 g ~ 0.03527396584 oz (OK)
-%1 ft ~ 12 plg (OK)
-%1 plg ~ 0.08333 ft (OK)
-
+%MODO DE USO:
 % Ingresar el valor a convertir
-% Ingresar la medición a convertir
-% Ingresar la opción de conversión de datos
+% Ingresar la opción de conversión (1 - 20)
 % El programa retorna el valor convertido en la unidad deseada
+
+%CONTRIBUCIONES:
+% Para contribuir al programa se deberán crear los formatos en cada case
+% el formato deberá manejarse según lo mostrado a continuación:
+
+% fprintf(valor de entrada en la unidad dada)
+% operacion a efectuar de conversion
+% fprintf(valor de salida en la unidad buscada)
+
+% Para agregarse una conversión a una unidad buscada
+% también deberá agregarse la conversión de vuelta,
+% esto con el fin de tener la conversión completa en cada caso
+
 function [output] = conversionesAPI(input, option)
 
 format long
