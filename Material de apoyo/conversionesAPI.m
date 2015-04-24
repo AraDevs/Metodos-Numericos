@@ -26,25 +26,25 @@ fprintf('Conversion de valores para mediciones varias MATLAB \n\n');
 switch option
 
 	% pulgadas -> cm
-    case 1
+	case 1
         fprintf('El valor ingresado es: %2.15f pulgadas \n',input);
         output = input*2.540;
         fprintf('El valor de salida es : %2.15f cm \n',output);
     
-    % cm -> pulgadas   
-    case 2
+	% cm -> pulgadas   
+	case 2
         fprintf('El valor ingresado es: %2.15f cm \n',input);
         output = input*0.3937007874;
         fprintf('El valor de salida es : %2.15f pulgadas \n',output);
         
-    % ft -> m
-    case 3
+	% ft -> m
+	case 3
         fprintf('El valor ingresado es: %2.15f ft \n',input);
         output = input*0.3048;
         fprintf('El valor de salida es : %2.15f m \n',output);
         
-    % m -> ft
-    case 4
+	% m -> ft
+	case 4
         fprintf('El valor ingresado es: %2.15f m \n',input);
         output = input*3.280839895;
         fprintf('El valor de salida es : %2.15f ft \n',output);
@@ -55,8 +55,8 @@ switch option
         output = input*1.609344;
         fprintf('El valor de salida es : %2.15f km \n',output);
         
-    % km -> millas
-    case 6
+	% km -> millas
+	case 6
         fprintf('El valor ingresado es: %2.15f km \n',input);
         output = input*0.6213711922;
         fprintf('El valor de salida es : %2.15f millas \n',output);
@@ -67,8 +67,8 @@ switch option
         output = input*0.4535924;
         fprintf('El valor de salida es : %2.15f kg \n',output);
         
-    % kg -> lb
-    case 8
+	% kg -> lb
+	case 8
         fprintf('El valor ingresado es: %2.15f kg \n',input);
         output = input*2.204622476;
         fprintf('El valor de salida es : %2.15f lb \n',output);        
@@ -79,8 +79,8 @@ switch option
         output = input*0.2389029576;
         fprintf('El valor de salida es : %2.15f cal \n',output);
         
-    % cal -> J
-    case 10
+	% cal -> J
+	case 10
         fprintf('El valor ingresado es: %2.15f cal \n',input);
         output = input*4.1858;
         fprintf('El valor de salida es : %2.15f J \n',output); 
@@ -91,8 +91,8 @@ switch option
         output = input*28.34952;
         fprintf('El valor de salida es : %2.15f g \n',output);
         
-    % g -> oz
-    case 12
+	% g -> oz
+	case 12
         fprintf('El valor ingresado es: %2.15f g \n',input);
         output = input*0.03527396584;
         fprintf('El valor de salida es : %2.15f oz \n',output);
@@ -103,8 +103,8 @@ switch option
         output = input*12;
         fprintf('El valor de salida es : %2.15f pulgadas \n',output);
         
-    % pulgadas -> ft
-    case 14
+	% pulgadas -> ft
+	case 14
         fprintf('El valor ingresado es: %2.15f pulgadas \n',input);
         output = input*0.08333;
         fprintf('El valor de salida es : %2.15f ft \n',output);
@@ -115,8 +115,8 @@ switch option
         output = input*(9/5) + 32;
         fprintf('El valor de salida es : %2.15f °F \n',output);
         
-    % °F -> °C
-    case 16
+	% °F -> °C
+	case 16
         fprintf('El valor ingresado es: %2.15f °F \n',input);
         output = (input - 32)*(5/9);
         fprintf('El valor de salida es : %2.15f °C \n',output);        
@@ -127,27 +127,27 @@ switch option
         output = input + 273.15;
         fprintf('El valor de salida es : %2.15f °K \n',output);
         
-    % °K -> °C
-    case 18
+	% °K -> °C
+	case 18
         fprintf('El valor ingresado es: %2.15f °K \n',input);
         output = input - 273.15;
         fprintf('El valor de salida es : %2.15f °C \n',output);  
 
- 	% °F -> °K
- 	case 19
+	% °F -> °K
+	case 19
         fprintf('El valor ingresado es: %2.15f °F \n',input);
         input1 = (input - 32)*(5/9);
         output = input1 + 273.15;
         fprintf('El valor de salida es : %2.15f °K \n',output);
         
-    % °K -> °F
-    case 20
+	% °K -> °F
+	case 20
         fprintf('El valor ingresado es: %2.15f °K \n',input);
         input1 = input*(9/5) + 32; 
         output = input - 273.15;
         fprintf('El valor de salida es : %2.15f °F \n',output);
 
-    otherwise
+	otherwise
         disp('Opción no disponible, favor colocar la opción adecuada')
         
 end
