@@ -147,6 +147,18 @@ switch option
         output = input - 273.15;
         fprintf('El valor de salida es : %2.15f °F \n',output);
 
+	% km/h -> m/s
+	case 19
+        fprintf('El valor ingresado es: %2.15f km/h \n',input);
+        output = input*1000/3600;
+        fprintf('El valor de salida es : %2.15f m/s \n',output);
+        
+	% m/s -> km/h
+	case 20
+        fprintf('El valor ingresado es: %2.15f m/s \n',input);
+        output = input*3600/1000 
+        fprintf('El valor de salida es : %2.15f km/h \n',output);
+
 	otherwise
         disp('Opción no disponible, favor colocar la opción adecuada')
         
