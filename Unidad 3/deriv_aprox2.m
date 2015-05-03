@@ -1,7 +1,8 @@
-%Derivación aproximada Versión 1
-%1) Ingresar la función para derivar, esta puede ocuparse posteriormente
-%2) Ingresar los valores de evaluación X en forma de vector
-%3) Genera los valores de f(x) para cada uno de los valores ingresados
+%Derivación aproximada Versión 2
+%1) Ingresar los valores de evaluación X en forma de vector
+%2) Ingresar los valores de evaluación Y en forma de vector
+%3) Ingresar la derivada solicitada en el ejercicio
+%4) Una vez ingresados todos estos datos procede a operar
 
 % Inicialización
 clear all
@@ -19,23 +20,24 @@ dap = zeros(n-1,n-1);
 
 % Dependiendo de la derivada solicitada es la operación que realizará dentro de este ciclo
 
-% Si es la 1a derivada, entonces realizará esta operación:
-% 			diff(vector Y)
-% f'(x) = -----------------
-%			diff(vector X)
+% Si solicita la 1a derivada, entonces realizará esta operación:
+%				diff(vector Y)
+% f'(x) = ---------------------------------------
+%				diff(vector X)
 if fd==1
 	Z = diff(Y)./diff(X);
 	for k=1:length(Z)
 		dap(k,fd) = Z(k);
 	end
 
+	% Imprime los resultados de la derivada solicitada
 	fprintf('\n')
 	fprintf('El valor de la derivada aproximada es: \n');
 	fprintf('%2.15f \n', dap(:,fd))
 
-% Si es la 2a derivada o mayor, entonces realizará esta operación:
-% 				diff(vector f(fd -1)(x))
-% f(fd)(x) = --------------------------------
+% Si solicita la 2a derivada o mayor, entonces realizará esta operación:
+%				diff(vector f(fd -1)(x))
+% f(fd)(x) = -------------------------------------
 %				diff(vector X(1:end-(fd-1)))
 else
 	Z = diff(Y)./diff(X);
@@ -55,16 +57,18 @@ else
 		%y así sucesivamente
 		Z = diff(dap1)./diff(X(1:end-(i-1)));
 
-		%Una vez obtenidos los valores de esa derivada aproximada
-		%los ingresa a la matriz completa de derivadas aproximadas
+		% Una vez obtenidos los valores de esa derivada aproximada
+		% los ingresa a la matriz completa de derivadas aproximadas
 		for k=1:length(Z)
 			dap(k,i) = Z(k);
 		end
 
 	end
 
+	% Muestra la matriz de derivadas aproximadas obtenidas en el transcurso del programa
 	dap
 
+	% Imprime los resultados de la derivada solicitada
 	fprintf('\n')
 	fprintf('El valor de la derivada aproximada es: \n');
 	fprintf('%2.15f \n', Z)
