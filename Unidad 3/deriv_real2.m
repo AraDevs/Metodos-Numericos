@@ -37,5 +37,5 @@ output = subs(F,X);
 
 % Imprime los resultados de la derivada solicitada
 fprintf('\n')
-fprintf('El valor de la derivada real es: \n');
+fprintf('El valor exacto de la derivada en cada punto de X es: \n');
 fprintf('%2.15f \n', output)
