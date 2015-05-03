@@ -27,9 +27,9 @@ end
 % Dependiendo de la derivada solicitada es la operación que realizará dentro de este ciclo
 
 % Si es la 1a derivada, entonces realizará esta operación:
-%				diff(vector Y)
+%			diff(vector Y)
 % f'(x) = ---------------------------------------
-%				diff(vector X)
+%			diff(vector X)
 if fd==1
 	Z = diff(Y)./diff(X);
 	for k=1:length(Z)
@@ -42,9 +42,9 @@ if fd==1
 	fprintf('%2.15f \n', dap(:,fd))
 
 % Si es la 2a derivada o mayor, entonces realizará esta operación:
-%				diff(vector f(fd -1)(x))
+%			diff(vector f(fd -1)(x))
 % f(fd)(x) = -------------------------------------
-%				diff(vector X(1:end-(fd-1)))
+%			diff(vector X(1:end-(fd-1)))
 else
 	Z = diff(Y)./diff(X);
 	for k=1:length(Z)
