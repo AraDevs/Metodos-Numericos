@@ -8,9 +8,9 @@
 %3) Ingresar los valores de evaluación X en forma de vector.
 %4) Una vez ingresados todos estos datos procede a operar.
 
-% Este programa de la derivada real es un archivo de tipo function,
-% esto permitirá usarlo como una API para las derivadas aproximadas
-% y permitirá que la solución muestre la derivada real y aproximada.
+% Este programa de la derivada real es un archivo de tipo function, lo cual permitirá
+% usarlo como una API para llamarlo en los métodos de derivadas aproximadas y que pueda
+% mostrar ambas soluciones requeridas: la derivada real y la derivada aproximada.
 % Si el ejercicio lo solicita se podrá obtener el error entre ambos datos.
 function [output] = deriv_real(fun, fd)
 
