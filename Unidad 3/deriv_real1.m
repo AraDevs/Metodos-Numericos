@@ -1,6 +1,7 @@
-%Derivada real
+%Derivada real Versión 1
 %El uso de esta derivada está limitada a ejercicios que den una función,
-%caso contrario no es posible obtener la derivada real
+%caso contrario no es posible obtener la derivada real.
+%El programa permite obtener los valores de la n-derivada
 
 %Uso del programa
 %1) Llamar a la función como deriv_real('[funcion]',[n derivada]). 
@@ -30,8 +31,7 @@ X = input('Ingrese los valores de X en formato [x0;x1;x2;...;xn]: ');
 F = diff(fun,fd);
 
 % f(fd)(x) = subs(Fun(n),vector X(1:end-fd))
-%output = subs(F,X(1:end-fd));
-output = subs(F,X);
+output = subs(F,X(1:end-fd));
 
 % Imprime los resultados de la derivada solicitada
 fprintf('\n')
