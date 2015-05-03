@@ -16,7 +16,9 @@
 function [output] = deriv_real(fun, fd)
 
 format long
-disp('Derivada real')
+fprintf('\n')
+fprintf('Derivada real')
+fprintf('\n')
 
 % Patch que permite remover advertencias del programa a efectuarse, esto permitirá
 % ocultar mensaje de advertencia sobre método char/diff a removerse en futuras versiones
@@ -36,3 +38,4 @@ output = subs(F,X(1:end-fd));
 % Imprime los resultados de la derivada solicitada
 fprintf('\n')
 fprintf('El valor de la derivada real es: \n');
+fprintf('%2.15f \n', output)
