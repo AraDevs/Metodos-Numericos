@@ -15,6 +15,8 @@ disp('Derivación aproximada V1')
 fun = input('Ingrese la función a evaluar: ');
 X = input('Ingrese los valores de X en formato [x0;x1;x2;...;xn]: ');
 fd = input('Ingrese la derivada solicitada en el ejercicio: ');
+fr1 = input('¿El programa solicita la derivada real? (1=sí,2=no): ');
+fr2 = input('¿El programa solicita la derivada exacta en cada punto de X? (1=sí,2=no): ');
 n = length(X);
 dap = zeros(n-1,n-1);
 Y = zeros(n,1);
@@ -78,4 +80,22 @@ else
 	fprintf('\n')
 	fprintf('El valor de la derivada aproximada es: \n');
 	fprintf('%2.15f \n', Z)
+end
+
+% Llamados a las resoluciones de derivadas reales
+% 1) Resolución de la derivada real
+if fr1==1
+	out = deriv_real1(fun,fd);
+	err = norm(out-Z);
+	fprintf('\n')
+	fprintf('El valor del error es: \n');
+	fprintf('%e \n', err)
+end
+
+% 2) Resolución de la derivada real en cada punto de X
+if fr2==1
+	out = deriv_real2(fun,fd)
+	fprintf('\n')
+	fprintf('El valor exacto de la derivada en cada punto de X es: \n');
+	fprintf('%e \n', out)
 end
