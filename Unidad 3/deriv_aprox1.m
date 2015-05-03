@@ -94,7 +94,7 @@ end
 
 % 2) Resolución de la derivada real en cada punto de X
 if fr2==1
-	out = deriv_real2(fun,fd)
+	out = deriv_real2(fun,fd);
 	fprintf('\n')
 	fprintf('El valor exacto de la derivada en cada punto de X es: \n');
 	fprintf('%e \n', out)
