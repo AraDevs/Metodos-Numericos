@@ -1,7 +1,7 @@
 %Conversiones varias
 %Aca se dan conversion de valores para varias mediciones físicas y matemáticas
 
-%MODO DE USO:
+%Uso del programa:
 % Ingresar el valor a convertir
 % Ingresar la opción de conversión (1 - 20)
 % El programa retorna el valor convertido en la unidad deseada
