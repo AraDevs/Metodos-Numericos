@@ -42,8 +42,9 @@ switch (no_int)
 		lim_sup1 = input('Ingrese el límite superior de la integral interna: ');
 		lim_inf2 = input('Ingrese el límite inferior de la integral externa: ');
 		lim_sup2 = input('Ingrese el límite superior de la integral externa: ');
+		fprintf('\n');
 
-		double(int(int(fun,lim_inf1,lim_sup1),lim_inf2,lim_sup2));
+		integral2(fun,lim_inf1,lim_sup1,lim_inf2,lim_sup2);
 
 	case 3
 		%disp('Resolución de integrales triples')
