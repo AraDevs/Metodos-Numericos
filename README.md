@@ -2,7 +2,9 @@
 
 Este repositorio consiste en los códigos completos la materia de Métodos Numéricos impartida en la Universidad Don Bosco de El Salvador; debido a esto el idioma en el que estará principalmente será en español (no prometo colocarlo en otro idioma, lo siento).
 
-Empecé este repositorio debido a que necesitaba una manera de ordenar todos los códigos de los ejercicios existentes de la materia y crear plantillas a partir de las cuales modificar y adaptar en base a los diversos ejercicios, muchos ejercicios pueden estar parcheados sólo para ejercicios en particular, por tanto, estos pueden no seguir el estándar definido para este repositorio, en resumen, este repositorio fue creado para:
+Empecé este repositorio debido a que necesitaba una manera de ordenar todos los códigos de los ejercicios existentes de la materia y crear plantillas a partir de las cuales modificar y adaptar en base a los diversos ejercicios proporcionados, muchos de estos pueden estar parcheados sólo para ciertas condiciones particulares, por tanto, estos pueden no seguir el estándar definido en cada unidad.
+
+En resumen, este repositorio fue creado para:
 
 1. Guardar los códigos varios de la materia.
 2. Estandarizar y crear una base para los ejercicios propuestos (salvo excepciones).
