@@ -1,5 +1,5 @@
 %Resolución de integrales simples
-%Resolución de integrales simples usando el comando int
+%Resolución de integrales simples por medio del comando int
 
 %MODO DE USO:
 % Ingresar la función a integrar
