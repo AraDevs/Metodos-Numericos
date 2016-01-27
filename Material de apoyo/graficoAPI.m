@@ -2,8 +2,8 @@
 %Programa que permite graficar una funcion por medio del comando "fplot"
 
 %Uso del programa:
-% Ingresar la función a convertir
-% Ingresar la opción de conversión (1 - 20)
+% Ingresar la función a graficar
+% Ingresar los limites superior e inferior para el gráfico
 % El programa retorna el valor convertido en la unidad deseada
 
 %Requisitos previos:
@@ -13,22 +13,16 @@
 % 2) La funcion solo puede estar en terminos de una variable debido a las 
 % opciones de dicho comando
 
-%CONTRIBUCIONES:
-% Para contribuir al programa se deberán crear los formatos en cada case
-% el formato deberá manejarse según lo mostrado a continuación:
-
-% fprintf(valor de entrada en la unidad dada)
-% operacion a efectuar de conversion
-% fprintf(valor de salida en la unidad buscada)
-
-% Para agregarse una conversión a una unidad buscada
-% también deberá agregarse la conversión de vuelta,
-% esto con el fin de tener la conversión completa en cada caso
+%TO DO:
+% agregar opciones de gráficos a crear
+% parámetros adicionales/opcionales para crear el gráfico
 
 function [output] = graficoAPI(input, lim1,lim2)
 
 format long
-fprintf('Conversion de valores para mediciones varias MATLAB \n\n');
+fprintf('Grafico de funciones varias MATLAB \n\n');
+
+fplot()
 
 switch option
 
