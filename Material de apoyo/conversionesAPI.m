@@ -164,6 +164,18 @@ switch option
         output = input*3600/1000 
         fprintf('El valor de salida es : %2.15f km/h \n',output);
 
+        % yarda -> m
+        case 23
+        fprintf('El valor ingresado es: %2.15f yardas \n',input);
+        output = input*0.9144
+        fprintf('El valor de salida es : %2.15f m \n',output);
+
+        % m -> yarda
+        case 24
+        fprintf('El valor ingresado es: %2.15f m \n',input);
+        output = input/0.9144 
+        fprintf('El valor de salida es : %2.15f yardas \n',output);                 
+
 	otherwise
         disp('Opcion no disponible, favor colocar la opcion adecuada')
         disp('Si necesita una conversion adicional, favor de verificar la pagina ');
