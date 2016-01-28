@@ -176,6 +176,18 @@ switch option
         output = input/0.9144 
         fprintf('El valor de salida es : %2.15f yardas \n',output);                 
 
+        % atm -> Pa
+        case 25
+        fprintf('El valor ingresado es: %2.15f atm \n',input);
+        output = input*101325
+        fprintf('El valor de salida es : %2.15f Pa \n',output);
+
+        % Pa -> atm
+        case 26
+        fprintf('El valor ingresado es: %2.15f Pa \n',input);
+        output = input/101325 
+        fprintf('El valor de salida es : %2.15f atm \n',output); 
+
 	otherwise
         disp('Opcion no disponible, favor colocar la opcion adecuada')
         disp('Si necesita una conversion adicional, favor de verificar la pagina ');
