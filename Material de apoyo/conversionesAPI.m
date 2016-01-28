@@ -3,7 +3,7 @@
 
 %Uso del programa:
 % Ingresar el valor a convertir
-% Ingresar la opción de conversión (1 - 20)
+% Ingresar la opción de conversión (1 - 30)
 % El programa retorna el valor convertido en la unidad deseada
 
 %CONTRIBUCIONES:
@@ -20,7 +20,6 @@
 
 %TO DO:
 % Menu para mostrar las conversiones a realizar existentes
-% Si la conversion no existe, motivar a ver la pagina de issues de Github
 % agrupar por tipo de conversion (temperatura, velocidad)?
 
 function [output] = conversionesAPI(input, option)
@@ -187,6 +186,30 @@ switch option
         fprintf('El valor ingresado es: %2.15f Pa \n',input);
         output = input/101325 
         fprintf('El valor de salida es : %2.15f atm \n',output); 
+
+        % km -> m
+        case 27
+        fprintf('El valor ingresado es: %2.15f km \n',input);
+        output = input*1000;
+        fprintf('El valor de salida es : %2.15f m \n',output);
+        
+        % m -> km
+        case 28
+        fprintf('El valor ingresado es: %2.15f m \n',input);
+        output = input/1000 
+        fprintf('El valor de salida es : %2.15f km \n',output);
+
+        % h -> s
+        case 29
+        fprintf('El valor ingresado es: %2.15f h \n',input);
+        output = input*3600;
+        fprintf('El valor de salida es : %2.15f s \n',output);
+        
+        % s -> h
+        case 30
+        fprintf('El valor ingresado es: %2.15f s \n',input);
+        output = input/3600 
+        fprintf('El valor de salida es : %2.15f h \n',output);
 
 	otherwise
         disp('Opcion no disponible, favor colocar la opcion adecuada')
