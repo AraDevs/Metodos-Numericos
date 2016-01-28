@@ -1,5 +1,5 @@
 %Conversiones varias
-%Aca se dan conversion de valores para varias mediciones físicas y matemáticas
+%Aca se dan conversion de valores para varias mediciones fisicas y matematicas
 
 %Uso del programa:
 % Ingresar el valor a convertir
@@ -14,9 +14,14 @@
 % operacion a efectuar de conversion
 % fprintf(valor de salida en la unidad buscada)
 
-% Para agregarse una conversión a una unidad buscada
+% Para agregarse una conversion a una unidad buscada
 % también deberá agregarse la conversión de vuelta,
 % esto con el fin de tener la conversión completa en cada caso
+
+%TO DO:
+% Menu para mostrar las conversiones a realizar existentes
+% Si la conversion no existe, motivar a ver la pagina de issues de Github
+% agrupar por tipo de conversion (temperatura, velocidad)?
 
 function [output] = conversionesAPI(input, option)
 
@@ -160,6 +165,9 @@ switch option
         fprintf('El valor de salida es : %2.15f km/h \n',output);
 
 	otherwise
-        disp('Opción no disponible, favor colocar la opción adecuada')
+        disp('Opcion no disponible, favor colocar la opcion adecuada')
+        disp('Si necesita una conversion adicional, favor de verificar la pagina ');
+        disp('https://github.com/SamBurgos/Metodos-Numericos/issues y colocar la o las');
+        disp('conversiones faltantes o que necesite')
         
 end
