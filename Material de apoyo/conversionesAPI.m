@@ -3,7 +3,7 @@
 
 %Uso del programa:
 % Ingresar el valor a convertir
-% Ingresar la opción de conversión (1 - 30)
+% Ingresar la opción de conversión (1 - 32)
 % El programa retorna el valor convertido en la unidad deseada
 
 %CONTRIBUCIONES:
@@ -210,6 +210,18 @@ switch option
         fprintf('El valor ingresado es: %2.15f s \n',input);
         output = input/3600 
         fprintf('El valor de salida es : %2.15f h \n',output);
+
+        % radianes -> grados
+        case 31
+        fprintf('El valor ingresado es: %2.15f radianes \n',input);
+        output = input*180/pi 
+        fprintf('El valor de salida es : %2.15f grados \n',output);
+
+        % grados -> radianes
+        case 32
+        fprintf('El valor ingresado es: %2.15f grados \n',input);
+        output = input*pi/180 
+        fprintf('El valor de salida es : %2.15f radianes \n',output);
 
 	otherwise
         disp('Opcion no disponible, favor colocar la opcion adecuada')
