@@ -148,7 +148,7 @@ switch option
 	case 20
         fprintf('El valor ingresado es: %2.15f °K \n',input);
         input1 = input*(9/5) + 32; 
-        output = input - 273.15;
+        output = input1 - 273.15;
         fprintf('El valor de salida es : %2.15f °F \n',output);
 
 	% km/h -> m/s
