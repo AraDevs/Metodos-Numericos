@@ -3,7 +3,7 @@ clear all
 clc
 format long
 syms x
-disp('Metodo de la Secante')
+disp('Ejercicio 1 Guia 1 MEN')
 
 % Sección de introducción de datos de trabajo
 % g = (log(17-3*x))/(log (9)) + x^2 - 20.820156997794982
