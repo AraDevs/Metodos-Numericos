@@ -17,6 +17,7 @@ fa = subs(g,a);
 fb = subs(g,b);
 
 % Sección de corrida del método (2/2)
+%1a verificacion: Los resultados de la funcion evaluada deben ser de signos distintos
 if(fa*fb < 0)
 	c = a + (b - a)/2;
 	fc = subs(g,c);
@@ -25,6 +26,9 @@ if(fa*fb < 0)
 	disp('n	a		b 		p 		error')
 	fprintf('%3.0f	%2.15f 		%2.15f 		%2.15f 		%e\n', cont, a,b,c,tol)
 
+	%2a verificacion: El programa debe seguir corriendo mientras no se cumpla el criterio de paro
+	% Dentro del while, deberá verificarse bajo que limite es que se encuentra el cambio de signo
+	% y realizar el cambio para continuar evaluando
 	while(abs(c-a) > error)
 		cont = cont + 1;
 
