@@ -13,7 +13,7 @@ disp('Ejercicio 3 Guia 1 MEN')
 % Si se escoge la opcion 2, entonces el ejercicio se resolvera usando Steffensen
 disp('Presione 1 para efectuar el ejercicio por medio de Biseccion')
 disp('Presione 2 para efectuar el ejercicio por medio de Steffensen')
-option = input('Introduzca la opcion deseada: ')
+option = input('Introduzca la opcion deseada: ');
 
 switch option
 	case 1 % Resolucion por medio de Biseccion
