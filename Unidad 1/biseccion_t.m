@@ -7,6 +7,7 @@ disp('Metodo de Biseccion')
 
 
 % Sección de introducción de datos de trabajo
+% Para la funcion de trabajo, esta debe estar en el formato f(x)=0
 a = input('Introduzca el valor de a: ');
 b = input('Introduzca el valor de b: ');
 g = input('Introduzca la función: ');
@@ -53,4 +54,5 @@ if(fa*fb < 0)
 end
 
 % Mostrar respuesta en pantalla
+% Verificar sección ya que a veces funciona bien, pero en otras da error que no encuentra la variable
 fprintf('El valor aproximado de x es: %2.15f\n', c);
