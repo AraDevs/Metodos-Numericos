@@ -1,4 +1,4 @@
-% Sección de inicialización
+% Seccion de inicializacion
 clear all
 clc
 format long

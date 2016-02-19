@@ -1,21 +1,22 @@
-% Sección de inicialización
+% Seccion de inicializacion
 clear all
 clc
 format long
 syms x
-disp('Metodo de la Posición falsa')
+disp('Metodo de la Posicion falsa')
 
-% Sección de introducción de datos de trabajo
+% Seccion de introduccion de datos de trabajo
 g = input('introduzca la función g: ');
 po = input('Introduzca el valor inicial 1: ');
 p1 = input('Introduzca el valor inicial 2: ');
 delta = input('Introduzca el valor del error: ');
 
-% Sección de evaluaciones del método (1/2)
+% Seccion de evaluaciones del método (1/2)
 a1 = subs(g,p1);
 a2 = subs(g,po);
 
-% Sección de corrida del método explicado (2/2)
+% Seccion de corrida del metodo (2/2)
+% Verificacion: Mientras no cumpla el criterio de paro, la funcion debe seguir mostrando resultados
 if(a1*a2<0)
 	pk = p1 - a1*(p1-po)/(a1 - a2);
 	a3 = subs(g,pk);

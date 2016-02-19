@@ -1,23 +1,22 @@
-%Seccion de inicializacion
+% Seccion de inicializacion
 clear all
 clc
 format long
 syms x
 disp('Metodo de Biseccion')
 
-
-% Sección de introducción de datos de trabajo
+% Seccion de introduccion de datos de trabajo
 % Para la funcion de trabajo, esta debe estar en el formato f(x)=0
 a = input('Introduzca el valor de a: ');
 b = input('Introduzca el valor de b: ');
-g = input('Introduzca la función: ');
-error = input('Introduzca el valor de precisión: ');
+g = input('Introduzca la funcion: ');
+error = input('Introduzca el valor de precision: ');
 
-% Sección de evaluaciones del método (1/2)
+% Seccion de evaluaciones del metodo (1/2)
 fa = subs(g,a);
 fb = subs(g,b);
 
-% Sección de corrida del método (2/2)
+% Seccion de corrida del metodo (2/2)
 %1a verificacion: Los resultados de la funcion evaluada deben ser de signos distintos
 if(fa*fb < 0)
 	c = a + (b - a)/2;
@@ -28,7 +27,7 @@ if(fa*fb < 0)
 	fprintf('%3.0f	%2.15f 		%2.15f 		%2.15f 		%e\n', cont, a,b,c,tol)
 
 	%2a verificacion: El programa debe seguir corriendo mientras no se cumpla el criterio de paro
-	% Dentro del while, deberá verificarse bajo que limite es que se encuentra el cambio de signo
+	% Dentro del while, debera verificarse bajo que limite es que se encuentra el cambio de signo
 	% y realizar el cambio para continuar evaluando
 	while(abs(c-a) > error)
 		cont = cont + 1;
@@ -54,5 +53,5 @@ if(fa*fb < 0)
 end
 
 % Mostrar respuesta en pantalla
-% Verificar sección ya que a veces funciona bien, pero en otras da error que no encuentra la variable
+% Verificar seccion ya que a veces funciona bien, pero en otras da error que no encuentra la variable
 fprintf('El valor aproximado de x es: %2.15f\n', c);

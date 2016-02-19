@@ -18,7 +18,7 @@ syms x
 format long
 disp('Generacion de vectores evaluados para ejercicios de Interpolaciones')
 
-g = input('Ingrese la función a evaluar: '); %Ingresar la funcion requerida
+g = input('Ingrese la funcion a evaluar: '); %Ingresar la funcion requerida
 X = input('Ingrese los valores de X en formato [x0,x1,x2,...,xn]: '); %Ingresar los valores del vector X
 n = length(X); %
 
