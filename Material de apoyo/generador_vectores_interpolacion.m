@@ -36,7 +36,7 @@ end
 Y
 
 % Evaluacion de derivada
-if option = 1
+if option == 1
 	
 	G = diff(g);
 	Z = zeros(n,n);
