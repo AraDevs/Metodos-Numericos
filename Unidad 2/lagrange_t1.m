@@ -1,5 +1,5 @@
-%Método de Interpolación por medio de Lagrange Versión 1
-%1) Ingresar la función a evaluar junto con sus valores de evaluación
+%Metodo de Interpolacion por medio de Lagrange Version 1
+%1) Ingresar la funcion a evaluar junto con sus valores de evaluación
 %2) Genera los valores de f(x) para cada uno de los valores ingresados
 clear all
 clc
@@ -8,7 +8,7 @@ syms x
 %dicha cantidad es la mas ocupada en este tipo de ejercicios
 format long
 disp('Interpolacion de Lagrange V1')
-g = input('Ingrese la función a evaluar: ');
+g = input('Ingrese la funcion a evaluar: ');
 X = input('Ingrese los valores de x en formato [x0,x1,x2,...,xn]: ');
 aprox = input('Ingrese el valor a aproximar: ');
 n = length(X);

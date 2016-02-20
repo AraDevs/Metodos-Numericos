@@ -1,4 +1,4 @@
-%Método de Interpolación por medio de Lagrange Versión 2
+%Metodo de Interpolacion por medio de Lagrange Version 2
 %1) Ingresar los valores de X dados en alguna tabla en particular
 %2) Ingresar los valores de Y respectivos de la misma tabla
 clear all

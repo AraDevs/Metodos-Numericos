@@ -1,5 +1,5 @@
-%Método de Interpolación por medio de Diferencias Divididas Versión 1
-%1) Ingresar la función a evaluar junto con sus valores de evaluación
+%Metodo de Interpolacion por medio de Diferencias Divididas Version 1
+%1) Ingresar la funcion a evaluar junto con sus valores de evaluación
 %2) Genera los valores de f(x) para cada uno de los valores ingresados
 %3) Genera los valores de f'(x) para cada uno de los valores ingresados
 clear all
@@ -9,19 +9,19 @@ syms x
 %dicha cantidad es la mas ocupada en este tipo de ejercicios
 format long
 disp('Interpolacion de Hermite mediante Diferencias Divididas V1')
-g = input('Ingrese la función a evaluar: ');
+g = input('Ingrese la funcion a evaluar: ');
 X = input('Ingrese los valores de X en formato [x0,x1,x2,...,xn]: ');
 aprox = input('Ingrese el valor a aproximar: ');
 n = length(X);
-np = 2*n; %se realizará una columna de tamaño doble
+np = 2*n; %se realizara una columna de tamaño doble
 G = diff(g,x);
 
 %matriz(filas,columnas)
 %matriz(arriba/abajo, derecha/izquierda)
 MPol = zeros(np,np);
 
-%En este método los valores se repiten 2 veces por cada columna
-%Se asignarán los valores de la columna de la matriz normal a la matriz doble
+%En este metodo los valores se repiten 2 veces por cada columna
+%Se asignaran los valores de la columna de la matriz normal a la matriz doble
 for i=1:n
 	%MPol(2*i) = Y(i);
 	MPol(2*i) = subs(g,X(i));
@@ -62,11 +62,11 @@ end
 pretty(FPol);
 R = subs(FPol,aprox)
 fprintf('\n');,
-fprintf('El valor aproximado de la función es: %2.15f \n\n', R);
+fprintf('El valor aproximado de la funcion es: %2.15f \n\n', R);
 
 fprintf('\n');,
 real = subs(g,aprox);
-fprintf('El valor exacto de la función es: %2.15f \n\n', real);
+fprintf('El valor exacto de la funcion es: %2.15f \n\n', real);
 
 raprox = abs(R - real);
-fprintf('El error de aproximación es: %e \n', raprox);
+fprintf('El error de aproximacion es: %e \n', raprox);

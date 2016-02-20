@@ -6,12 +6,13 @@ syms x
 disp('Metodo de la Posicion falsa')
 
 % Seccion de introduccion de datos de trabajo
-g = input('introduzca la función g: ');
+% Para la funcion de trabajo, esta debe estar en el formato f(x)=0
+g = input('introduzca la funcion g: ');
 po = input('Introduzca el valor inicial 1: ');
 p1 = input('Introduzca el valor inicial 2: ');
 delta = input('Introduzca el valor del error: ');
 
-% Seccion de evaluaciones del método (1/2)
+% Seccion de evaluaciones del metodo (1/2)
 a1 = subs(g,p1);
 a2 = subs(g,po);
 

@@ -5,12 +5,12 @@ format long
 syms x
 disp('Metodo de Horner')
 
-% Sección de introducción de datos de trabajo
+% Sección de introduccion de datos de trabajo
 xo = input('Introduzca el valor X0: ');
 g = input('Introduzca el polinomio a evaluar: ');
 error = input('Introduzca el valor del error: ');
 
-% Sección de evaluaciones del método (1/2)
+% Sección de evaluaciones del metodo (1/2)
 A = sym2poly(g);
 n = length(A);
 B = zeros(size(A));
@@ -44,7 +44,8 @@ tol = abs(x-xo);
 disp('n			x0		x	error')
 fprintf('%3.0f	%2.15f	%2.15f	%e\n', cont,xo,x,tol)
 
-% Sección de evaluaciones del método (2/2)
+% Seccion de corrida del metodo (2/2)
+% Verificacion: Mientras no cumpla el criterio de paro, la funcion debe seguir mostrando resultados
 while(tol > error)
 	
 	cont = cont+1;

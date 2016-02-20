@@ -5,7 +5,7 @@ format long
 syms x
 disp('Metodo de Müller')
 
-% Sección de introducción de datos de trabajo
+% Sección de introduccion de datos de trabajo
 xo = input('Introduzca el valor X0: ');
 x1 = input('Introduzca el valor x1: ');
 x2 = input('Introduzca el valor x2: ');
@@ -29,7 +29,8 @@ tol = abs(x3 - x2);
 disp('n		x0		x1 		x2 		X3		error')
 fprintf('%3.0f	%2.15f 		%2.15f 		%2.15f		%2.15f 		%e\n', cont,xo,x1,x2,x3,tol);
 
-% Sección de evaluaciones del método (2/2)
+% Seccion de corrida del metodo (2/2)
+% Verificacion: Mientras no cumpla el criterio de paro, la funcion debe seguir mostrando resultados
 while(tol > error)
 	cont =  cont + 1;
 	x0 = x1;

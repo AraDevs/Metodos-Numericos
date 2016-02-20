@@ -1,4 +1,4 @@
-%Método de Interpolación por medio de Diferencias Divididas Versión 2
+%Metodo de Interpolacion por medio de Diferencias Divididas Version 2
 %1) Ingresar los valores de X dados en alguna tabla en particular
 %2) Ingresar los valores de Y respectivos de la misma tabla
 clear all
@@ -36,10 +36,10 @@ end
 pretty(FPol);
 R = subs(FPol,aprox)
 fprintf('\n');,
-fprintf('El valor aproximado de la función es: %2.15f \n\n', R);
+fprintf('El valor aproximado de la funcion es: %2.15f \n\n', R);
 
 %real = subs(g,aprox);
-%fprintf('El valor exacto de la función es: %2.15f \n\n', real);
+%fprintf('El valor exacto de la funcion es: %2.15f \n\n', real);
 
 %raprox = abs(R - real);
-%fprintf('El error de aproximación es: %e \n', raprox);
+%fprintf('El error de aproximacion es: %e \n', raprox);
