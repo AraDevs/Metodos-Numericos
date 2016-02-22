@@ -37,9 +37,3 @@ pretty(FPol);
 R = subs(FPol,aprox)
 fprintf('\n');,
 fprintf('El valor aproximado de la funcion es: %2.15f \n\n', R);
-
-%real = subs(g,aprox);
-%fprintf('El valor exacto de la funcion es: %2.15f \n\n', real);
-
-%raprox = abs(R - real);
-%fprintf('El error de aproximacion es: %e \n', raprox);
