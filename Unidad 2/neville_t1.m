@@ -17,7 +17,7 @@ n = length(X);
 %matriz(arriba/abajo, derecha/izquierda)
 MPol = zeros(n,n);
 for i=1:n
-	MPol(1,i) = subs(g,X(i));	
+	MPol(i,1) = subs(g,X(i));	
 end
 
 for i=2:n

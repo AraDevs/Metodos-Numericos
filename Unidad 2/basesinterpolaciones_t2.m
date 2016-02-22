@@ -20,9 +20,3 @@ MPol(:,1) = Y'
 for i=1:n
 	Y(i) = MPol(i);
 end
-
-%for i=2:n
-%	for j=1:n
-%		Y(j,i) = 
-%	end
-%end

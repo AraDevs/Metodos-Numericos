@@ -17,12 +17,5 @@ n = length(X);
 %matriz(arriba/abajo, derecha/izquierda)
 Y = zeros(n,n);
 for i=1:n
-	Y(i) = subs(g,X(i));	
+	Y(i,1) = subs(g,X(i));	
 end
-
-Y
-%for i=2:n
-%	for j=i:n
-%		Y(j,i) = 
-%	end
-%end
