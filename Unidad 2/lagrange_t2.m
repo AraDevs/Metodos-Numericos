@@ -11,7 +11,7 @@ format long
 %3) Ingresar el valor a aproximar
 disp('Interpolacion de Lagrange V2')
 X = input('Ingrese los valores de x en formato [x0,x1,x2,...,xn]: ');
-Y = input('Ingrese los valores de Y en formato [y0,y1,y2,...,yn]: ');
+Y = input('Ingrese los valores de y en formato [y0,y1,y2,...,yn]: ');
 aprox = input('Ingrese el valor a aproximar: ');
 n = length(X);
 
