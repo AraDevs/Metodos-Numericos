@@ -26,8 +26,6 @@ for i=2:n
     %prod from {i=1} to {n} (x_{i-1} - x_i)
 	den=den*(X(i-1) - X(i));
 	L(i) = num/den;
-	%pretty(L(i))
-	fprintf('\n');	
 end
 
 % Se inicializa el valor del polinomio aproximado a 0,
