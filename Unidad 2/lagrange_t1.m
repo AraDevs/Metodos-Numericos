@@ -53,5 +53,6 @@ fprintf('\n');,
 ValR = subs(g,aprox);
 fprintf('El valor exacto de la funcion es: %2.15f \n\n', ValR);
 
+% Error de aproximacion
 tol = abs(ValA - ValR);
 fprintf('El error de aproximacion es: %e \n', tol);
