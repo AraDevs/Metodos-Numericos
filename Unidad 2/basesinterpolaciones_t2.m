@@ -1,15 +1,17 @@
-%Metodo de Interpolacion por medio de (metodo) Versión 2
-%1) Ingresar los valores de X dados en alguna tabla en particular
-%2) Ingresar los valores de Y respectivos de la misma tabla
+%Metodo de Interpolacion por medio de (metodo) Version 2
+
+% Seccion de inicializacion
 clear all
 clc
 syms x
-%format long permite colocar los numeros con 15 decimales
-%dicha cantidad es la mas ocupada en este tipo de ejercicios
 format long
-disp('Interpolacion de Neville V2')
-X = input('Ingrese los valores de X en formato [x0,x1,x2,...,xn]: ');
-Y = input('Ingrese los valores de Y en formato [y0,y1,y2,...,yn]: ');
+
+%1) Ingresar los valores de evaluación en formato vector
+%2) Ingresar los valores resultantes en formato vector
+%3) Ingresar el valor a aproximar
+%disp('Interpolacion de (metodo) V2')
+X = input('Ingrese los valores de x en formato [x0,x1,x2,...,xn]: ');
+Y = input('Ingrese los valores de y en formato [y0,y1,y2,...,yn]: ');
 aprox = input('Ingrese el valor a aproximar: ');
 n = length(X);
 

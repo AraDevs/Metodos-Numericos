@@ -1,15 +1,18 @@
 %Metodo de Interpolacion por medio de (metodo) Version 1
-%1) Ingresar la funcion a evaluar junto con sus valores de evaluacion
-%2) Genera los valores de f(x) para cada uno de los valores ingresados
+
+% Seccion de inicializacion
 clear all
 clc
 syms x
-%format long permite colocar los numeros con 15 decimales
-%dicha cantidad es la mas ocupada en este tipo de ejercicios
 format long
-disp('Interpolacion de Neville V1')
+
+%1) Ingresar la funcion a evaluar 
+%2) Ingresar los valores de evaluación en formato vector
+%3) Ingresar el valor a aproximar
+%4) Genera los valores de f(x) para cada uno de los valores del vector
+%disp('Interpolacion de (metodo) V1')
 g = input('Ingrese la funcion a evaluar: ');
-X = input('Ingrese los valores de X en formato [x0,x1,x2,...,xn]: ');
+X = input('Ingrese los valores de x en formato [x0,x1,x2,...,xn]: ');
 aprox = input('Ingrese el valor a aproximar: ');
 n = length(X);
 
