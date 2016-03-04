@@ -49,9 +49,9 @@ for i=2:2*n
 		% El valor de la derivada solo debe aparecer en la 1a corrida,
 		% a partir de la 2a corrida en adelante esta no debe estar presente
 		if(i==2 & den==0)
-			MPol(j,i) = Z(j);
+			MPol(j,i) = Z(j)
 		else
-			MPol(j,i) = num/den;
+			MPol(j,i) = num/den
 		end
 
 		% Codigo patch para mostrar las formulas en cada iteracion

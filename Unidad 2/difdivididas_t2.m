@@ -28,7 +28,7 @@ for i=2:n
 		num = MPol(j,i-1) - MPol(j-1,i-1);
 		% den = X(j) - X(j-i+1)
 		den = X(j) - X(j-i+1);
-		MPol(j,i) = num/den;
+		MPol(j,i) = num/den
 
 		% Codigo patch para mostrar las formulas en cada iteracion
 		% sprintf permite mostrar el codigo en formato similar a como se escribiria a mano,

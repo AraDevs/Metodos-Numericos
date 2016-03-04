@@ -30,7 +30,7 @@ for i=2:n
 	num=num*(x - X(i));
     %prod from {i=1} to {n} (x_{i-1} - x_i)
 	den=den*(X(i-1) - X(i));
-	L(i) = num/den;
+	L(i) = num/den
 end
 
 % Se inicializa el valor del polinomio aproximado a 0,
