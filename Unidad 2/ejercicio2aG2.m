@@ -1,5 +1,3 @@
-%Metodo de Interpolacion por medio de Hermite por Diferencias Version 2
-
 % Seccion de inicializacion
 clear all
 clc
@@ -83,7 +81,7 @@ ValA = subs(Pol_Herm,aprox);
 fprintf('\n');,
 fprintf('El valor aproximado de la funcion es: %2.15f \n\n', ValA);
 
-% Evaluacion del valor aproximado de la funcion por interpolacion cubica
+% % Valor aproximado por interpolacion cubica
 fprintf('\n');
 ValC = interp1(X,Y,aprox,'cubic');
 fprintf('El valor aproximado por interp. cubica es: %2.15f  \n\n', ValC)

@@ -1,5 +1,3 @@
-%Metodo de Interpolacion por medio de Neville Version 2
-
 % Seccion de inicializacion
 clear all
 clc
@@ -46,7 +44,7 @@ ValA = MPol(n,n);
 fprintf('\n');,
 fprintf('El valor aproximado de la funcion es: %2.15f \n\n', ValA);
 
-% Evaluacion del valor aproximado de la funcion por interpolacion escalonada
+% % Valor aproximado por interpolacion escalonada
 fprintf('\n');
 ValIE = interp1(X,Y,aprox,'spline');
 fprintf('El valor aproximado por interp. escalonada es: %2.15f  \n\n', ValIE);

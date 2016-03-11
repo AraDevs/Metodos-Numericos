@@ -1,5 +1,3 @@
-%Metodo de Interpolacion por medio de Diferencias Divididas Version 1
-
 % Seccion de inicializacion
 clear all
 clc
@@ -67,17 +65,17 @@ ValA = subs(Pol_Lag,aprox);
 fprintf('\n');,
 fprintf('El valor aproximado de la funcion es: %2.15f \n\n', ValA);
 
-% Evaluacion del valor aproximado en la funcion real
+% Evaluacion del valor real en la funcion
 fprintf('\n');,
 ValR = subs(g,aprox);
 fprintf('El valor exacto de la funcion es: %2.15f \n\n', ValR);
 
-% Evaluacion del valor aproximado de la funcion por interpolacion escalonada
+% % Valor aproximado por interpolacion escalonada
 fprintf('\n');
 ValIE = interp1(X,Y,aprox,'spline');
 fprintf('El valor aproximado por interp. escalonada es: %2.15f  \n\n', ValIE)
 
-% Evaluacion del valor aproximado de la funcion por interpolacion cubica
+% % Valor aproximado por interpolacion cubica
 fprintf('\n');
 ValC = interp1(X,Y,aprox,'cubic');
 fprintf('El valor aproximado por interp. cubica es: %2.15f  \n\n', ValC)
