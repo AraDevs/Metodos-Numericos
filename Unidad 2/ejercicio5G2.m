@@ -8,7 +8,7 @@ format long
 %2) Ingresar los valores de evaluación en formato vector
 %3) Ingresar el valor a aproximar
 %4) Genera los valores de f(x) para cada uno de los valores del vector
-disp('Interpolacion de Lagrange V1')
+disp('Guia 2 MEN Ejercicio 5')
 g = (log(12 - 5*x^2))/log (18)
 X = [-1.2,-1.1,-0.92,-0.55,-0.42,-0.40,-0.38,-0.31]
 aprox = -0.458
