@@ -32,4 +32,5 @@ while(abs(p1 - po) > error)
 end
 
 % Mostrar respuesta aproximada en pantalla
-fprintf('El valor aproximado de x es: %2.15f\n', p1);
+fprintf('\n')
+fprintf('El valor aproximado de x es: %2.15f\n', p1)
