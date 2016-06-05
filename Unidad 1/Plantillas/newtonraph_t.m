@@ -17,11 +17,11 @@ f1 = subs(g,po);
 f2 = subs(G,po);
 P = po - f1/f2;
 cont = 1;
-tol = abs(P);
+tol = abs(P - po);
 
 % Mostrar los valores solicitados en pantalla
-disp('n		P0			P1 			error')
-fprintf('%3.0f	%2.15f 		%2.15f 		%e\n', cont, po,P,tol);
+fprintf('n \t\t P0 \t\t P1 \t\t error')
+fprintf('%3.0f \t %2.15f \t %2.15f \t %e\n', cont, po,P,tol)
 
 % Sección de corrida del metodo (2/2)
 % Verificacion: Mientras no cumpla el criterio de paro, la funcion debe seguir mostrando resultados
@@ -33,8 +33,9 @@ while(abs(P - po) > error)
 	P = po - f1/f2;
 	tol = abs(P - po);
 	
-	fprintf('%3.0f	%2.15f 		%2.15f 		%e\n', cont, po,P,tol);
+	fprintf('%3.0f \t %2.15f \t %2.15f \t %e\n', cont, po,P,tol)
 end
 
-% Mostrar respuesta en pantalla
-fprintf('El valor aproximado de x es: %2.15f\n', P);
+% Mostrar respuesta aproximada en pantalla
+fprintf('\n')
+fprintf('El valor aproximado de x es: %2.15f\n', P)
