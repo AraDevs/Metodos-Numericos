@@ -44,7 +44,7 @@ boq = C(n-1);
 x = xo - bop/boq;
 
 tol = abs(x - xo);
-fprintf('n \t\t x0 \t\t x \t\t error')
+fprintf('n \t\t x0 \t\t x \t\t error \n')
 fprintf('%3.0f \t %2.15f \t %2.15f \t %e\n',cont,xo,x,tol)
 
 % Seccion de corrida del metodo (2/2)

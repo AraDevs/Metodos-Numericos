@@ -18,7 +18,7 @@ tol = abs(p1 - po);
 
 
 % Mostrar los valores solicitados en pantalla
-fprintf('n \t\t p0 \t\t p1 \t \t error')
+fprintf('n \t\t p0 \t\t p1 \t \t error \n')
 fprintf('%3.0f \t %2.15f \t %2.15f \t %e \n',cont,po,p1,tol)
 
 % Seccion de corrida del metodo (2/2)

@@ -24,7 +24,7 @@ if(a1*a2<0)
 	cont = 1;
 	tol = abs(pk - p1);
 
-	fprintf('n \t\t p0 \t\t p1 \t\t p2 \t\t error')
+	fprintf('n \t\t p0 \t\t p1 \t\t p2 \t\t error \n')
 	fprintf('%3.0f \t %2.15f \t %2.15f \t %2.15f \t %e\n',cont,po,p1,pk,tol)
 
 	while(abs(pk - p1) > error)

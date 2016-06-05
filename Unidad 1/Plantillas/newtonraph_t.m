@@ -20,7 +20,7 @@ cont = 1;
 tol = abs(P - po);
 
 % Mostrar los valores solicitados en pantalla
-fprintf('n \t\t P0 \t\t P1 \t\t error')
+fprintf('n \t\t P0 \t\t P1 \t\t error \n')
 fprintf('%3.0f \t %2.15f \t %2.15f \t %e\n', cont, po,P,tol)
 
 % Sección de corrida del metodo (2/2)

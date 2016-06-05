@@ -26,7 +26,7 @@ x3 = x2 - sgn;
 tol = abs(x3 - x2);
 
 % Mostrar los valores en pantalla (1a iteración)
-fprintf('n \t\t x0 \t\t x1 \t\t x2 \t\t x3 \t\t error')
+fprintf('n \t\t x0 \t\t x1 \t\t x2 \t\t x3 \t\t error \n')
 fprintf('%3.0f \t %2.15f \t %2.15f \t %2.15f \t %2.15f \t %e\n',cont,xo,x1,x2,x3,tol)
 
 % Seccion de corrida del metodo (2/2)
