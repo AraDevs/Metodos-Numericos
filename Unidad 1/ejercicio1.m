@@ -21,7 +21,6 @@ cont = 1;
 tol = abs(subs(g,pk));
 
 % Mostrar los valores solicitados en pantalla
-%disp('n		p0		p1 		p2 		error')
 fprintf('n \t\t p0 \t\t\t p1 \t\t\t p2 \t\t   error \n')
 fprintf('%3.0f \t %2.15f \t %2.15f \t %2.15f \t %e\n', cont, po,p1,pk,tol)
 
