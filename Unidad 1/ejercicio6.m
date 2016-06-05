@@ -6,11 +6,11 @@ syms x
 disp('Ejercicio 6 Guia 1 MEN')
 
 % Sección de introduccion de datos de trabajo
-xo = -13;	
-x1 = -12.1;
-x2  = -11.5;
-g = x^5 + 11*x^4 - 21*x^3 - 10*x^2 + 21*x + 5;
-error = input('Introduzca el valor del error: ');
+xo = -6.1;
+x1 = -5.3;
+x2 = -4.9;
+g = 3*x^5 + 11*x^4 - 21*x^3 - 10*x^2 + 21*x - 5;
+error = 1e-12;
 
 % Sección de evaluaciones del método (1/2)
 gxo = subs(g,xo);
@@ -26,12 +26,12 @@ x3 = x2 - sgn;
 tol = abs(x3 - x2);
 
 % Mostrar los valores en pantalla (1a iteración)
-disp('n		x0		x1 		x2 		X3		error')
-fprintf('%3.0f	%2.15f 		%2.15f 		%2.15f		%2.15f 		%e\n', cont,xo,x1,x2,x3,tol);
+fprintf('n \t\t x0 \t\t x1 \t\t x2 \t\t x3 \t\t error \n')
+fprintf('%3.0f \t %2.15f \t %2.15f \t %2.15f \t %2.15f \t %e\n',cont,xo,x1,x2,x3,tol)
 
 % Seccion de corrida del metodo (2/2)
 % Verificacion: Mientras no cumpla el criterio de paro, la funcion debe seguir mostrando resultados
-while(tol > error)
+while(abs(x3 - x2) > error)
 	cont =  cont + 1;
 	x0 = x1;
 	x1 = x2;
@@ -46,11 +46,11 @@ while(tol > error)
 	c = gx2;
 	sgn = 2*c/(b + sign(b)*(sqrt(b^2 - 4*a*c)));
 	x3 = x2 - sgn;
-	tol = abs(x3-x2);
+	tol = abs(x3 - x2);
 
-	disp('n		x0		x1 		x2 		X3		error')
-	fprintf('%3.0f	%2.15f 		%2.15f 		%2.15f		%2.15f 		%e\n', cont,xo,x1,x2,x3,tol);
+	fprintf('%3.0f \t %2.15f \t %2.15f \t %2.15f \t %2.15f \t %e\n',cont,xo,x1,x2,x3,tol)
 end
 
-% Mostrar respuesta en pantalla
-fprintf('El valor aproximado de x es: %2.15f\n', x3);
+% Mostrar respuesta aproximada en pantalla
+fprintf('\n')
+fprintf('El valor aproximado de x es: %2.15f\n', x3)
