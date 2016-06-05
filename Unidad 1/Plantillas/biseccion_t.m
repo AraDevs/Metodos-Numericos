@@ -23,8 +23,8 @@ if(fa*fb < 0)
 	fc = subs(g,c);
 	cont = 1;
 	tol = abs(fc);
-	disp('n	a		b 		p 		error')
-	fprintf('%3.0f	%2.15f 		%2.15f 		%2.15f 		%e\n', cont, a,b,c,tol)
+	fprintf('n \t\t p0 \t\t\t p1 \t\t\t p2 \t\t   error \n')
+	fprintf('%3.0f \t %2.15f \t %2.15f \t %2.15f \t %e\n',cont,a,b,c,tol)
 
 	%2a verificacion: El programa debe seguir corriendo mientras no se cumpla el criterio de paro
 	% Dentro del while, debera verificarse bajo que limite es que se encuentra el cambio de signo
@@ -47,11 +47,11 @@ if(fa*fb < 0)
 		end
 
 		fc = subs(g, c);
-		fprintf('%3.0f	%2.15f 		%2.15f 		%2.15f 		%e\n',cont,a,b,c,tol)
+		fprintf('%3.0f \t %2.15f \t %2.15f \t %2.15f \t %e\n',cont,a,b,c,tol)
 	end
 
-end
+	% Mostrar respuesta aproximada en pantalla
+	fprintf('\n');
+	fprintf('El valor aproximado de x es: %2.15f\n', c);
 
-% Mostrar respuesta en pantalla
-% Verificar seccion ya que a veces funciona bien, pero en otras da error que no encuentra la variable
-fprintf('El valor aproximado de x es: %2.15f\n', c);
+end
