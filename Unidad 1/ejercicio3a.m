@@ -3,7 +3,7 @@ clear all
 clc
 format long
 syms x
-disp('Metodo de la Secante')
+disp('Ejercicio 3a Guia 1 MEN')
 
 % Sección de introduccion de datos de trabajo
 % Para la funcion de trabajo, esta debe estar en el formato f(x)=0

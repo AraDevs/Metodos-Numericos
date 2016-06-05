@@ -3,7 +3,7 @@ clear all
 clc
 format long
 syms x
-disp('Metodo de Newton Raphson')
+disp('Ejercicio 5 Guia 1 MEN')
 
 %Sección de introducción de datos de trabajo
 % Para la funcion de trabajo, esta debe estar en el formato f(x)=0
