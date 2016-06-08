@@ -3,14 +3,14 @@ clear all
 clc
 format long
 syms x
-disp('Ejercicio 3a Guia 1 MEN')
+disp('Metodo de la Secante')
 
 % Sección de introduccion de datos de trabajo
 % Para la funcion de trabajo, esta debe estar en el formato f(x)=0
-% valor del solve: 17.203276380407487553932160126127
-g = (x + x^(1/4))*((18.125 - x) + (18.125 - x)^(1/4)) - 36.585606272364359;
-po = 17.20327637;
-p1 = 17.20327638;
+% valor del solve: 13.500000000000000267681124652105
+g = (x - x^(1/4))*((18.125 - x) - (18.125 - x)^(1/4)) - 36.585606272364359;
+po = 13.44;
+p1 = 13.50;
 error = 1e-12;
 
 % Sección de evaluaciones del metodo (1/2)
