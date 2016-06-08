@@ -7,9 +7,9 @@ disp('Ejercicio 3b Guia 1 MEN')
 
 % Seccion de introduccion de datos de trabajo
 % Para la funcion de trabajo, esta debe estar en el formato f(x)=x
-% valor del solve: 17.203276380407487553932160126127
-po = 17.20327615;
-g = (36.585606272364359)/((18.125 - x) + (18.125 - x)^(1/4)) - x^(1/4);
+% valor del solve: 13.500000000000000267681124652105
+po = 13.4999999999;
+g = (36.585606272364359)/((18.125 - x) - (18.125 - x)^(1/4)) + x^(1/4);
 error = 1e-12;
 
 % Sección de evaluaciones del metodo (1/2)
