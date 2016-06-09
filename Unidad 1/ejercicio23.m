@@ -5,44 +5,39 @@ format long
 syms x
 disp('Ejercicio 23 Guia 1 MEN')
 
-% Seccion de inicialización de variables de trabajo
-e = 8.85e-12;
-a = 50/100;
-q = 20e-6;
-Q = 30e-6;
-F = 2.5;
+% Seccion de introduccion de datos de trabajo
+% Para la funcion de trabajo, esta debe estar en el formato f(x)=x
+% valor del solve: 1.509785140699101
+% Seccion de valores iniciales
+e = 8.85e-12; a = 90/100;
+q = 2e-5; Q = 2e-5;
+F = 1;
 
-% Sección de datos iniciales del ejercicio
-% valor aproximado del solve: 1.330446734811017
-po = 1.330445318453;
+%g = (1/(4*pi*e))*((q*Q*x)/((x^2 + a^2)^(3/2))) - F;
 g = ((4*pi*F*e)*(x^2 + a^2)^(3/2))/(q*Q);
+po = 0.221;
 error = 1e-12;
-fprintf('\n')
 
-% Sección de evaluaciones del metodo (1/2)
+% Seccion de evaluaciones del método (1/2)
 p1 = subs(g,po);
-p2 = subs(g,p1);
-P = po - (p1 - po)^2/(p2 + 2*p1 + po);
-tol = abs(P - po);
 cont = 1;
+tol = abs(p1 - po);
+
 
 % Mostrar los valores solicitados en pantalla
-disp('n		x0		x1 		x2 		x		error')
-fprintf('%3.0f \t %2.15f \t %2.15f \t %2.15f \t %2.15f \t %e\n', cont, po,p1,p2,P,tol);
+fprintf('n \t\t p0 \t\t p1 \t \t error \n')
+fprintf('%3.0f \t %2.15f \t %2.15f \t %e \n',cont,po,p1,tol)
 
 % Seccion de corrida del metodo (2/2)
 % Verificacion: Mientras no cumpla el criterio de paro, la funcion debe seguir mostrando resultados
-while(abs(P - po) > error)
-	cont = cont + 1;
-	po = P;
-	p1 = subs(g,po);
-	p2 = subs(g,p1);
-	P = po - (p1 - po)^2/(p2 + 2*p1 + po);
-	tol = abs(P - po);
-
-	fprintf('%3.0f	%2.15f 		%2.15f 		%2.15f		%2.15f 		%e\n', cont, po,p1,p2,P,tol);
+while(abs(p1 - po) > error)
+    cont = cont + 1;
+    po = p1;
+    p1 = subs(g,po);
+    tol = abs(p1 - po);
+    fprintf('%3.0f \t %2.15f \t %2.15f \t %e \n',cont,po,p1,tol)
 end
 
-% Mostrar respuesta en pantalla
+% Mostrar respuesta aproximada en pantalla
 fprintf('\n')
-fprintf('El valor aproximado de la distancia x es: %2.15f\n', P);
+fprintf('El valor aproximado de x es: %2.15f\n', p1)
