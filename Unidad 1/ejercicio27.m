@@ -1,0 +1,41 @@
+% Seccion de inicializacion
+clear all
+clc
+format long
+syms c
+disp('Ejercicio 27 Guia 1 MEN')
+
+% Seccion de introduccion de datos de trabajo
+% Para la funcion de trabajo, esta debe estar en el formato f(x)=x
+% valor del solve: 3.498080556491523
+V1 = 129.6; V = V1*1000/3600;
+m = 80; t = 4; gr = 9.81;
+
+%g = (m*gr/c)*(1 - exp(-c*t/m)) - V;
+g = (m*gr/V)*(1 - exp(-c*t/m));
+po = 3.4980805564;
+error = 1e-12;
+
+% Seccion de evaluaciones del método (1/2)
+p1 = subs(g,po);
+cont = 1;
+tol = abs(p1 - po);
+
+
+% Mostrar los valores solicitados en pantalla
+fprintf('n \t\t p0 \t\t p1 \t \t error \n')
+fprintf('%3.0f \t %2.15f \t %2.15f \t %e \n',cont,po,p1,tol)
+
+% Seccion de corrida del metodo (2/2)
+% Verificacion: Mientras no cumpla el criterio de paro, la funcion debe seguir mostrando resultados
+while(abs(p1 - po) > error)
+    cont = cont + 1;
+    po = p1;
+    p1 = subs(g,po);
+    tol = abs(p1 - po);
+    fprintf('%3.0f \t %2.15f \t %2.15f \t %e \n',cont,po,p1,tol)
+end
+
+% Mostrar respuesta aproximada en pantalla
+fprintf('\n')
+fprintf('El valor aproximado de x es: %2.15f\n', p1)
