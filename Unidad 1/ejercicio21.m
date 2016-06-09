@@ -3,7 +3,7 @@ clear all
 clc
 format long
 syms h
-disp('Ejercicio 20 Guia 1 MEN')
+disp('Ejercicio 21 Guia 1 MEN')
 
 % Sección de introduccion de datos de trabajo
 % Para la funcion de trabajo, esta debe estar en el formato f(x)=0
