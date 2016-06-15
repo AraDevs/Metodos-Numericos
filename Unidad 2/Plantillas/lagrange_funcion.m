@@ -1,43 +1,58 @@
-%Metodo de Interpolacion por medio de Lagrange Version 1
+%Metodo de Interpolacion por Lagrange para funcion
 
 % Seccion de inicializacion
 clear all
 clc
 syms x
 format long
+disp('Metodo de Interpolacion por Lagrange para funcion')
 
-%1) Ingresar la funcion a evaluar 
-%2) Ingresar los valores de evaluación en formato vector
+% Seccion de introduccion de datos de trabajo
+%1) Ingresar la funcion a evaluar para obtener los valores generados
+%2) Ingresar los valores de evaluacion en formato vector
 %3) Ingresar el valor a aproximar
-%4) Genera los valores de f(x) para cada uno de los valores del vector
-disp('Interpolacion de Lagrange V1')
+%4) Se obtienen la cantidad de puntos para empezar a crear el polinomio
+%5) Se obtienen la cantidad de puntos para empezar a crear el polinomio
 g = input('Ingrese la funcion a evaluar: ');
 X = input('Ingrese los valores de x en formato [x0,x1,x2,...,xn]: ');
+Y = subs(g,X);
 aprox = input('Ingrese el valor a aproximar: ');
-n = length(X);
+m = length(X);
 
-for i=1:n
-	Y(i) = subs(g,X(i));
-end
+% matriz(filas,columnas)
+% matriz(arriba/abajo, derecha/izquierda)
 
 % Se inicializan valores de numerador y denominador a 1,
 % esto permite aplicar el factor producto de Lagrange
 num=1;
 den=1;
 
-for i=2:n
-	%prod from {i=1} to {n} (x - x_i)
-	num=num*(x - X(i));
-    %prod from {i=1} to {n} (x_{i-1} - x_i)
-	den=den*(X(i-1) - X(i));
-	L(i) = num/den
+% Primera iteracion (k) sirve para definir el polinomio de Lagrange
+% Segunda iteracion (n) sirve para armar los terminos del polinomio
+% Al finalizar el "for" externo, se vuelven a inicializar los valores
+% del denominador y numerador para crear nuevamente los polinomios
+for k=1:m
+	% Datos del numerador
+	for n=1:m
+		if k==n
+			% No se realizan productos ni polinomios, de lo contrario
+			% terminaria con un valor 0 en el denominador
+		else
+			num=num*(x - X(n));
+			den=den*(X(k) - X(n));
+		end
+	end
+	
+	L(k) = num/den
+	pause
+	num=1;den=1;
 end
 
 % Se inicializa el valor del polinomio aproximado a 0,
 % esto permite aplicar el factor suma del polinomio de Lagrange
 init = 0;
-for i=1:n
-    Pol_Lag = init + Y(i)*L(i);
+for k=1:m
+    Pol_Lag = init + Y(k)*L(k);
     init = Pol_Lag;
 end
 
