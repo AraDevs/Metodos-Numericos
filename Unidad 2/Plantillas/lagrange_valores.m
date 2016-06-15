@@ -1,46 +1,66 @@
-%Metodo de Interpolacion por medio de Lagrange Version 2
+%Metodo de Interpolacion por Lagrange con valores
 
 % Seccion de inicializacion
 clear all
 clc
 syms x
 format long
+disp('Metodo de Interpolacion por Lagrange con valores')
 
-%1) Ingresar los valores de evaluación en formato vector
-%2) Ingresar los valores resultantes en formato vector
+% Seccion de introduccion de datos de trabajo
+%1) Ingresar los valores generados en formato vector
+%2) Ingresar los valores de evaluacion en formato vector
 %3) Ingresar el valor a aproximar
-disp('Interpolacion de Lagrange V2')
+%4) Se obtienen la cantidad de puntos para empezar a crear el polinomio
+%5) Se obtienen la cantidad de puntos para empezar a crear el polinomio
 X = input('Ingrese los valores de x en formato [x0,x1,x2,...,xn]: ');
 Y = input('Ingrese los valores de y en formato [y0,y1,y2,...,yn]: ');
 aprox = input('Ingrese el valor a aproximar: ');
-n = length(X);
+m = length(X);
+
+% matriz(filas,columnas)
+% matriz(arriba/abajo, derecha/izquierda)
 
 % Se inicializan valores de numerador y denominador a 1,
 % esto permite aplicar el factor producto de Lagrange
 num=1;
 den=1;
 
-for i=2:n
-	%prod from {i=1} to {n} (x - x_i)
-	num=num*(x - X(i));
-    %prod from {i=1} to {n} (x_{i-1} - x_i)
-	den=den*(X(i-1) - X(i));
-	L(i) = num/den
+% Primera iteracion (k) sirve para definir el polinomio de Lagrange
+% Segunda iteracion (n) sirve para armar los terminos del polinomio
+% Al finalizar el "for" externo, se vuelven a inicializar los valores
+% del denominador y numerador para crear nuevamente los polinomios
+for k=1:m
+	% Datos del numerador
+	for n=1:m
+		if k==n
+			% No se realizan productos ni polinomios, de lo contrario
+			% terminaria con un valor 0 en el denominador
+		else
+			num=num*(x - X(n));
+			den=den*(X(k) - X(n));
+		end
+	end
+	
+	L(k) = num/den
+	pause
+	num=1;den=1;
 end
 
 % Se inicializa el valor del polinomio aproximado a 0,
 % esto permite aplicar el factor suma del polinomio de Lagrange
 init = 0;
-for i=1:n
-    Pol_Lag = init + Y(i)*L(i);
+for k=1:m
+    Pol_Lag = init + Y(k)*L(k);
     init = Pol_Lag;
 end
 
 % Polinomio de Lagrange y valor aproximado
-% Debido a que este modelo no coloca funcion real, no solicita
-% valor real ni error en valores
 disp('Polinomio de Lagrange resultante: ')
 fprintf('\n');
 pretty(Pol_Lag)
 ValA = subs(Pol_Lag,aprox);
 fprintf('El valor aproximado de la funcion es: %2.15f \n\n', ValA);
+
+% Debido a que este modelo no solicita funcion, no es posible calcular
+% el valor real ni el error de aproximacion
