@@ -5,7 +5,7 @@ clear all
 clc
 syms x
 format long
-disp('Ejercicio 2 Guia 2 MEN')
+disp('Ejercicio 2a Guia 2 MEN')
 
 %1) Ingresar los valores de evaluación x en formato vector 
 %2) Ingresar los valores de evaluación y en formato vector
@@ -83,7 +83,7 @@ ValA = subs(Pol_Herm,aprox);
 fprintf('\n');,
 fprintf('El valor aproximado de la funcion es: %2.15f \n\n', ValA);
 
-% Valor del ejercicio mediante interpolacion cubica
+% Valor aproximado mediante interpolacion cubica
 ValA1 = interp1(X,Y,aprox,'cubic');
 fprintf('\n');
 fprintf('El valor aproximado mediante interpolacion cubica es: %2.15f \n\n', ValA1)
