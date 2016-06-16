@@ -1,37 +1,42 @@
-%Metodo de Interpolacion por medio de Diferencias Divididas Version 1
+%Metodo de Interpolacion por Diferencias Divididas para funcion
 
 % Seccion de inicializacion
 clear all
 clc
 syms x
 format long
+disp('Metodo de Interpolacion por Diferencias Divididas para funcion')
 
-%1) Ingresar la funcion a evaluar 
-%2) Ingresar los valores de evaluación en formato vector
+% Seccion de introduccion de datos de trabajo
+%1) Ingresar la funcion a evaluar para obtener los valores generados
+%2) Ingresar los valores de evaluacion en formato vector
 %3) Ingresar el valor a aproximar
-%4) Genera los valores de f(x) para cada uno de los valores del vector
-disp('Interpolacion de Diferencias Divididas V1')
+%4) Se obtienen la cantidad de puntos para empezar a crear el polinomio
 g = input('Ingrese la funcion a evaluar: ');
 X = input('Ingrese los valores de x en formato [x0,x1,x2,...,xn]: ');
 aprox = input('Ingrese el valor a aproximar: ');
-n = length(X);
+m = length(X);
 
-%matriz(filas,columnas)
-%matriz(arriba/abajo, derecha/izquierda)
-MPol = zeros(n,n);
-for i=1:n
+% Seccion de evaluacion de datos
+%5) Se generan los valores iniciales del polinomio en base a cada valor de X
+%6) Se genera un vector (llamado aquí MPol) para mostrar en pantalla y operar
+% matriz(filas,columnas)
+% matriz(arriba/abajo, derecha/izquierda)
+MPol = zeros(m,m);
+for i=1:m
 	MPol(i,1) = subs(g,X(i));	
 end
 
+% Seccion de corrida del metodo de interpolacion
 % Se trabajaran los valores de numerador y denominador por aparte,
 % posteriormente se uniran estos valores para obtener el resultado
 for i=2:n
 	for j=i:n
 		% num = F[j,i-1] - F[j-1,i-1]
-		num = MPol(j,i-1) - MPol(j-1,i-1);
 		% den = X(j) - X(j-i+1)
+		num = MPol(j,i-1) - MPol(j-1,i-1);
 		den = X(j) - X(j-i+1);
-		MPol(j,i) = num/den
+		MPol(j,i) = num/den;
 
 		% Codigo patch para mostrar las formulas en cada iteracion
 		% sprintf permite mostrar el codigo en formato similar a como se escribiria a mano,
@@ -43,6 +48,9 @@ for i=2:n
 
 	end
 end
+
+% Se muestra la matriz de diferencias divididas finalizada
+MPol
 
 % Se inicializa el valor del polinomio aproximado a 0 y 1,
 % esto permite aplicar los factores suma y producto
