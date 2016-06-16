@@ -1,10 +1,11 @@
-%Metodo de Interpolacion por medio de Hermite por Diferencias Version 2
+%Metodo de Interpolacion por medio de Hermite por Diferencias Divididas con valores
 
 % Seccion de inicializacion
 clear all
 clc
 syms x
 format long
+disp('Metodo de Interpolacion por medio de Hermite por Diferencias Divididas con valores')
 
 %1) Ingresar los valores de evaluación x en formato vector 
 %2) Ingresar los valores de evaluación y en formato vector
@@ -12,7 +13,6 @@ format long
 %4) Genera la derivada de la funcion ingresada
 %5) La columna que genera es de tamaño doble ya que se duplican los valores ingresados
 %6) Se asignaran los valores de la columna de la matriz normal a la matriz doble
-disp('Interpolacion de Hermite mediante Diferencias Divididas V2')
 X = input('Ingrese los valores de X en formato [x0,x1,x2,...,xn]: ');
 Y = input('Ingrese los valores de Y en formato [y0,y1,y2,...,yn]: ');
 Yd = input('Ingrese los valores de las derivadas en formato [yd0,yd1,yd2,...,ydn]: ');
@@ -42,16 +42,16 @@ end
 for i=2:2*n
 	for j=i:2*n
 		%num = F[j,i-1] - F[j-1,i-1]
-		num = MPol(j,i-1) - MPol(j-1,i-1);
 		%den = X(j) - X(j-i+1)
+		num = MPol(j,i-1) - MPol(j-1,i-1);
 		den = Xm(j) - Xm(j-i+1);
 		
 		% El valor de la derivada solo debe aparecer en la 1a corrida,
 		% a partir de la 2a corrida en adelante esta no debe estar presente
 		if(i==2 & den==0)
-			MPol(j,i) = Z(j)
+			MPol(j,i) = Z(j);
 		else
-			MPol(j,i) = num/den
+			MPol(j,i) = num/den;
 		end
 
 		% Codigo patch para mostrar las formulas en cada iteracion
