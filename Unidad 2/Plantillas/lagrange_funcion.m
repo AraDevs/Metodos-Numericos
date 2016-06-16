@@ -12,7 +12,6 @@ disp('Metodo de Interpolacion por Lagrange para funcion')
 %2) Ingresar los valores de evaluacion en formato vector
 %3) Ingresar el valor a aproximar
 %4) Se obtienen la cantidad de puntos para empezar a crear el polinomio
-%5) Se obtienen la cantidad de puntos para empezar a crear el polinomio
 g = input('Ingrese la funcion a evaluar: ');
 X = input('Ingrese los valores de x en formato [x0,x1,x2,...,xn]: ');
 Y = subs(g,X);
