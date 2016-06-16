@@ -30,8 +30,8 @@ end
 % Seccion de corrida del metodo de interpolacion
 % Se trabajaran los valores de numerador y denominador por aparte,
 % posteriormente se uniran estos valores para obtener el resultado
-for i=2:n
-	for j=i:n
+for i=2:m
+	for j=i:m
 		% num = F[j,i-1] - F[j-1,i-1]
 		% den = X(j) - X(j-i+1)
 		num = MPol(j,i-1) - MPol(j-1,i-1);
@@ -57,7 +57,7 @@ MPol
 % del polinomio de Diferencias que se genera
 init = 0;
 PPol = 1;
-for i=1:n
+for i=1:m
 	PPol = PPol*(x - X(i)); %Factor de multiplicacion
     Pol_Lag = init + MPol(i,i)*PPol; %Factor de suma
     init = Pol_Lag;
