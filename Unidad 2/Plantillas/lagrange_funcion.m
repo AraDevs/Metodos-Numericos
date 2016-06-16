@@ -42,8 +42,7 @@ for k=1:m
 		end
 	end
 	
-	L(k) = num/den
-	pause
+	L(k) = num/den;
 	num=1;den=1;
 end
 

@@ -41,8 +41,7 @@ for k=1:m
 		end
 	end
 	
-	L(k) = num/den
-	pause
+	L(k) = num/den;
 	num=1;den=1;
 end
 
@@ -60,6 +59,3 @@ fprintf('\n');
 pretty(Pol_Lag)
 ValA = subs(Pol_Lag,aprox);
 fprintf('El valor aproximado de la funcion es: %2.15f \n\n', ValA);
-
-% Debido a que este modelo no solicita funcion, no es posible calcular
-% el valor real ni el error de aproximacion
