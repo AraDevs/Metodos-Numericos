@@ -14,8 +14,8 @@ format long
 % matriz de resolucion
 disp('Resolucion de ED por medio de Punto Medio')
 
-a = input('Introduzca el valor del limite superior: ');
-b = input('Introduzca el valor del limite inferior: ');
+a = input('Introduzca el valor del limite inferior: ');
+b = input('Introduzca el valor del limite superior: ');
 c = input('Introduzca la condicion inicial entre comillas -> y(a)=x: ');
 c1 = input('Introduzca el valor de la condicion inicial: ');
 F = input('Introduzca la Ecuacion Diferencial entre comillas: ');
