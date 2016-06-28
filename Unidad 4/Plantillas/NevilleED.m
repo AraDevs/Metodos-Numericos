@@ -12,22 +12,25 @@ syms x
 format long
 
 % Interpolacion de Neville para ED
-n = length(X);
+m = length(X);
 
 %matriz(filas,columnas)
 %matriz(arriba/abajo, derecha/izquierda)
-MPol = zeros(n,n);
-MPol(:,1) = Y';
+MPol = zeros(m,m);
+for i=1:m
+	MPol(i,1) = Y(i);	
+end
 
+% Seccion de corrida del metodo de interpolacion
 % Se trabajaran los valores de numerador y denominador por aparte,
 % posteriormente se uniran estos valores para obtener el resultado
-for i=2:n
-	for j=i:n
+for i=2:m
+	for j=i:m
 		% num = (x - X(j-1))*Q(j-1,i-1) - (x - X(j))*Q(j,i-1)
-		num = (aprox - X(j-1))*MPol(j-1,i-1) - (aprox - X(j))*MPol(j,i-1);
 		% den = (X(j) - X(j-i+1))
+		num = (aprox - X(j-1))*MPol(j,i-1) - (aprox - X(j))*MPol(j-1,i-1);
 		den = X(j) - X(j-i+1);
-		MPol(j,i) = num/den
+		MPol(j,i) = num/den;
 
 		% Codigo patch para mostrar las formulas en cada iteracion
 		% sprintf permite mostrar el codigo en formato similar a como se escribiria a mano,
@@ -40,5 +43,5 @@ for i=2:n
 	end
 end
 
-% Valor aproximado de la funcion
+% Valor aproximado de Neville
 ValA = MPol(n,n);
