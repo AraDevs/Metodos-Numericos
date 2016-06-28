@@ -19,17 +19,13 @@ format long
 % Interpolacion de Hermite mediante Diferencias Divididas para ED
 %1) La columna que genera es de tamaño doble ya que se duplican los valores ingresados
 %2) Se asignaran los valores de la columna de la matriz normal a la matriz doble
-%3) Pendiente de realizar: colocar una manera de sacar derivada (ver concepto de MEN)
-X = input('Ingrese los valores de X en formato [x0,x1,x2,...,xn]: ');
-Y = input('Ingrese los valores de Y en formato [y0,y1,y2,...,yn]: ');
-%Yd = input('Ingrese los valores de las derivadas en formato [yd0,yd1,yd2,...,ydn]: ');
-n = length(X);
+m = length(X);
 
 % Seccion de asignacion de valores
 %matriz(filas,columnas)
 %matriz(arriba/abajo, derecha/izquierda)
 MPol = zeros(2*n,2*n);
-for i=1:n
+for i=1:m
 	% Conversion del vector y en formato doble
 	MPol(2*i) = Y(i);
 	MPol(2*i-1) = Y(i);
@@ -39,25 +35,25 @@ for i=1:n
 	Xm(2*i-1) = X(i);
 	
 	% Asignacion de valores evaluados en la derivada
-	%Z(2*i) = subs(G,X(i));
-	%Z(2*i-1) = subs(G,X(i));
+	Z(2*i) = subs(F1,X(i));
+	Z(2*i-1) = subs(F1,X(i));
 end
 
 % Se trabajaran los valores de numerador y denominador por aparte,
 % posteriormente se uniran estos valores para obtener el resultado
-for i=2:2*n
-	for j=i:2*n
+for i=2:2*m
+	for j=i:2*m
 		%num = F[j,i-1] - F[j-1,i-1]
-		num = MPol(j,i-1) - MPol(j-1,i-1);
 		%den = X(j) - X(j-i+1)
+		num = MPol(j,i-1) - MPol(j-1,i-1);
 		den = Xm(j) - Xm(j-i+1);
 		
 		% El valor de la derivada solo debe aparecer en la 1a corrida,
 		% a partir de la 2a corrida en adelante esta no debe estar presente
 		if(i==2 & den==0)
-			MPol(j,i) = Z(j)
+			MPol(j,i) = Z(j);
 		else
-			MPol(j,i) = num/den
+			MPol(j,i) = num/den;
 		end
 
 		% Codigo patch para mostrar las formulas en cada iteracion
@@ -76,13 +72,14 @@ end
 % del polinomio de Hermite que se genera
 init = 0;
 PPol = 1;
-for i=1:(2*n-1)
-	PPol = PPol*(x - Xm(i)); %Factor de multiplicacion
+for i=1:(2*m-1)
+    PPol = PPol*(x - Xm(i)); %Factor de multiplicacion
     Pol_Herm = init + MPol(i,i)*PPol; %Factor de suma
     init = Pol_Herm;
 end
 
-pretty(Pol_Herm) %Polinomio de Hermite por Diferencias
-
-% Valor aproximado de la funcion
+% Polinomio de Hermite y valor aproximado
+disp('Polinomio de Hermite resultante: ')
+fprintf('\n');
+pretty(Pol_Herm)
 ValA = subs(Pol_Herm,aprox);
