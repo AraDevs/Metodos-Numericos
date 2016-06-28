@@ -12,32 +12,42 @@ syms x
 format long
 
 % Interpolacion de Lagrange para ED
-n = length(X);
+m = length(X);
 
 % Se inicializan valores de numerador y denominador a 1,
 % esto permite aplicar el factor producto de Lagrange
 num=1;
 den=1;
 
-for i=2:n
-	%prod from {i=1} to {n} (x - x_i)
-	num=num*(x - X(i));
-    %prod from {i=1} to {n} (x_{i-1} - x_i)
-	den=den*(X(i-1) - X(i));
-	L(i) = num/den
+% Primera iteracion (k) sirve para definir el polinomio de Lagrange
+% Segunda iteracion (n) sirve para armar los terminos del polinomio
+% Al finalizar el "for" externo, se vuelven a inicializar los valores
+% del denominador y numerador para crear nuevamente los polinomios
+for k=1:m
+	% Datos del numerador
+	for n=1:m
+		if k==n
+			% No se realizan productos ni polinomios, de lo contrario
+			% terminaria con un valor 0 en el denominador
+		else
+			num=num*(x - X(n));
+			den=den*(X(k) - X(n));
+		end
+	end
+	
+	L(k) = num/den;
+	num=1;den=1;
 end
 
 % Se inicializa el valor del polinomio aproximado a 0,
 % esto permite aplicar el factor suma del polinomio de Lagrange
 init = 0;
-for i=1:n
-    Pol_Lag = init + Y(i)*L(i);
+for k=1:m
+    Pol_Lag = init + Y(k)*L(k);
     init = Pol_Lag;
 end
 
 % Polinomio de Lagrange y valor aproximado
-% Debido a que este modelo no coloca funcion real, no solicita
-% valor real ni error en valores
 disp('Polinomio de Lagrange resultante: ')
 fprintf('\n');
 pretty(Pol_Lag)
