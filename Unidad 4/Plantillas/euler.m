@@ -31,7 +31,6 @@ mED = zeros(N,4);
 % Asignacion de valores iniciales en la matriz de ED
 % se comienzan con los valores iniciales
 fprintf('t \t\t\t Wi+1 \t\t\t Y(t) \t\t\t Error \n')
-%disp('t		Wi+1 			Y(t) 			Error')
 mED(1,1) = a;
 mED(1,2) = c1;
 mED(1,3) = c1;
@@ -71,6 +70,8 @@ else
 	% HermiteED: Interpolacion por Hermite (principalmente Difer. Dividid.)
 	% TrazadoresED: Interpolacion por Trazadores Cubicos
 	% respuesta = metodo(X,Y,valor a interpolar);
+	% Este cambio debe hacerse dentro de este codigo, ya que no es posible colocarlo
+	% automaticamente, posterior a eso colocar el metodo a ocupar
 	v_interp = input('Introduzca el valor a aproximar: ');
 	resp_interp = LagrangeED(mED(:,1),mED(:,2), v_interp);
 
