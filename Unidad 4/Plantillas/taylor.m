@@ -37,6 +37,7 @@ fprintf('Se ingresaran %d derivadas implicitas \n',m)
 for i=1:m
 	FI(i) = input('Ingrese la derivada: ');
 end
+fprintf('\n')
 
 % Asignacion de valores iniciales en la matriz de ED
 % se comienzan con los valores iniciales
