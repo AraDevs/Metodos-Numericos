@@ -39,8 +39,6 @@ fprintf('%2.15f \t %2.15f \t %2.15f \t %e\n', mED(1,1), mED(1,2),mED(1,3),mED(1,
 
 % Se llena la matriz con los datos de paso, el valor aproximado de la ED en base a la
 % valor W(i+1), el valor según la resolucion del dsolve y el error entre los nodos
-
-% Se debe modificar esta seccion para agregar el modo de trabajo del metodo a ocupar
 f = dsolve(F,c);
 for i=2:N+1
 	mED(i,1) = mED(i-1,1) + h;
