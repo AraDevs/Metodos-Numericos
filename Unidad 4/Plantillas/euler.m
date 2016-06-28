@@ -14,13 +14,13 @@ format long
 % matriz de resolucion
 disp('Resolucion de ED por medio de Euler')
 
-a = input('Introduzca el valor del limite superior: ');
-b = input('Introduzca el valor del limite inferior: ');
+a = input('Introduzca el valor del limite inferior: ');
+b = input('Introduzca el valor del limite superior: ');
 c = input('Introduzca la condicion inicial entre comillas -> y(a)=x: ');
 c1 = input('Introduzca el valor de la condicion inicial: ');
 F = input('Introduzca la Ecuacion Diferencial entre comillas: ');
 F1 = input('Introduzca la funcion de trabajo f(t,y) despejada: ');
-h = input('Introduzca el tamaño de paso: ');
+h = input('Introduzca el tamaño de paso h: ');
 N = (b-a)/h;
 
 % Llenado de matriz de soluciones de ED
